@@ -83,17 +83,17 @@ for (let checkValue = 0; checkValue <= n; checkValue++) {
 
 console.log("EXERCISE 5:\n==========\n");
 
-let fizzDivisor = Math.round(Math.random() * (1 - 10) + 1);
-let buzzDivisor = Math.round(Math.random() * (1 - 10) + 1);
-let nN = Math.round(Math.random() * (1 - 1000) + 1);
-let start = Math.round(Math.random() * (1 - 10) + 1);
+let fizzDivisor = Math.round(Math.random() * (10 - 1) + 1);
+let buzzDivisor = Math.round(Math.random() * (10 - 1) + 1);
+let nN = Math.round(Math.random() * (1000 - 1) + 1);
+let start = Math.round(Math.random() * (10 - 1) + 1);
 
 for (let nNum = start; nNum <= nN; nNum++) {
-  if (nNum % 3 == 0 && nNum % 5 == 0) {
+  if (nNum % fizzDivisor == 0 && nNum % buzzDivisor == 0) {
     console.log(`${nNum} Fizz Buzz`);
-  } else if (buzzDivisor % 5 == 0) {
+  } else if (nNum % buzzDivisor == 0) {
     console.log(`${nNum} Buzz`);
-  } else if (fizzDivisor % 3 == 0) {
+  } else if (nNum % fizzDivisor == 0) {
    console.log(`${nNum} Fizz`);
   }
 }
