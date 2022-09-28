@@ -81,12 +81,19 @@ for (let checkValue = 0; checkValue <= n; checkValue++) {
   }
 }
 
-//  for (let bottlesOnTheWall = 99; bottlesOnTheWall >= 0; bottlesOnTheWall--) {
-//      if (bottlesOnTheWall) {
-//        console.log(`${bottlesOnTheWall} bottles of milk on the wall...`);
-//      } else {
-//        console.log(`No more bottles of milk on the wall!`);
-//      }
-//    }
+console.log("EXERCISE 5:\n==========\n");
 
+let fizzDivisor = Math.round(Math.random() * (1 - 10) + 1);
+let buzzDivisor = Math.round(Math.random() * (1 - 10) + 1);
+let nN = Math.round(Math.random() * (1 - 1000) + 1);
+let start = Math.round(Math.random() * (1 - 10) + 1);
 
+for (let nNum = start; nNum <= nN; nNum++) {
+  if (nNum % 3 == 0 && nNum % 5 == 0) {
+    console.log(`${nNum} Fizz Buzz`);
+  } else if (buzzDivisor % 5 == 0) {
+    console.log(`${nNum} Buzz`);
+  } else if (fizzDivisor % 3 == 0) {
+   console.log(`${nNum} Fizz`);
+  }
+}
